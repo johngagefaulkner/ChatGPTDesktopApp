@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window
+    x:Class="ChatGPTDesktopApp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:ChatGPTDesktopApp"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="ChatGPTDesktopApp"
+    mc:Ignorable="d">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="Base" />
+    </Window.SystemBackdrop>
+
+    <Grid x:Name="AppRootGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TitleBar
+            x:Name="AppTitleBar"
+            Title="ChatGPT Desktop App"
+            Grid.Row="0"
+            Height="48"
+            MinHeight="48"
+            MaxHeight="48"
+            BackRequested="AppTitleBar_BackRequested"
+            Background="Transparent"
+            BackgroundSizing="OuterBorderEdge"
+            IsBackButtonEnabled="True"
+            IsBackButtonVisible="False"
+            IsHitTestVisible="True"
+            IsPaneToggleButtonVisible="False"
+            PaneToggleRequested="AppTitleBar_PaneToggleRequested"
+            Subtitle="Preview">
+            <TitleBar.IconSource>
+                <ImageIconSource ImageSource="/Assets/StoreLogo.png" />
+            </TitleBar.IconSource>
+            <TitleBar.LeftHeader>
+                <Button
+                    x:Name="TestBackButton"
+                    Height="40"
+                    Margin="0"
+                    Padding="4"
+                    Style="{ThemeResource TitleBarBackButtonStyle}" />
+            </TitleBar.LeftHeader>
+        </TitleBar>
+
+        <Grid
+            x:Name="AppContentGrid"
+            Grid.Row="1"
+            Background="Transparent">
+            <local:MainPage />
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="ChatGPTDesktopApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ChatGPTDesktopApp">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <!--  Other merged dictionaries here  -->
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--  Theme Dictionaries  -->
+            <ResourceDictionary.ThemeDictionaries>
+
+                <!--  Light Theme Resources  -->
+                <ResourceDictionary x:Key="Light">
+                    <SvgImageSource x:Key="AppNewChatIcon" UriSource="ms-appx:///Assets/Icons/NewTemporaryChatIconLight.svg" />
+                </ResourceDictionary>
+
+                <!--  Dark Theme Resources  -->
+                <ResourceDictionary x:Key="Dark">
+                    <SvgImageSource x:Key="AppNewChatIcon" UriSource="ms-appx:///Assets/Icons/NewTemporaryChatIcon.svg" />
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <!--  LinearGradientBrushes here  -->
+            <LinearGradientBrush x:Key="CopilotThemeSectionBgLightgrad" StartPoint="0.55,0.0" EndPoint="0.45,1.0">
+                <GradientStop Offset="0.10" Color="#FFF5F6FF" />
+                <GradientStop Offset="1.0" Color="#FFDFF4FB" />
+            </LinearGradientBrush>
+            <LinearGradientBrush x:Key="CopilotThemeEmGradient" StartPoint="0.5,0.0" EndPoint="0.5,1.0">
+                <GradientStop Offset="0.0" Color="#FF7209D4" />
+                <GradientStop Offset="0.33" Color="#FF2832D4" />
+                <GradientStop Offset="1.0" Color="#FF00A5B2" />
+            </LinearGradientBrush>
+            <LinearGradientBrush x:Key="CopilotThemeEmGradientPink" StartPoint="0.5,0.0" EndPoint="0.5,1.0">
+                <GradientStop Offset="0.0" Color="#FFED7077" />
+                <GradientStop Offset="0.66" Color="#FF9A34E7" />
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="Icons8GradientBlueOverlay" StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Offset="0" Color="#145162FF" />
+                <GradientStop Offset="1" Color="#335162FF" />
+            </LinearGradientBrush>
+
+            <Style
+                x:Key="TitleBarBackButtonTallStyle"
+                BasedOn="{StaticResource TitleBarBackButtonStyle}"
+                TargetType="Button">
+                <Setter Property="Margin" Value="8,4,4,4" />
+                <Setter Property="Padding" Value="4" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="VerticalAlignment" Value="Stretch" />
+                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                <Setter Property="VerticalContentAlignment" Value="Stretch" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="ChatGPTDesktopApp.Pages.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:ChatGPTDesktopApp.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="Transparent"
+    BackgroundSizing="OuterBorderEdge"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel
+            Margin="24,24,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Orientation="Horizontal"
+            Spacing="10">
+            <Grid
+                Width="160"
+                Height="240"
+                Background="{ThemeResource CopilotThemeEmGradient}"
+                BorderBrush="{ThemeResource ControlElevationBorderBrush}"
+                CornerRadius="8">
+                <Grid.BackgroundTransition>
+                    <BrushTransition Duration="0:0:0.3" />
+                </Grid.BackgroundTransition>
+            </Grid>
+            <Grid
+                Width="160"
+                Height="240"
+                Background="{ThemeResource CopilotThemeEmGradientPink}"
+                BorderBrush="{ThemeResource ControlElevationBorderBrush}"
+                CornerRadius="8" />
+            <Grid
+                Width="160"
+                Height="240"
+                Background="{ThemeResource CopilotThemeSectionBgLightgrad}"
+                BorderBrush="{ThemeResource ControlElevationBorderBrush}"
+                CornerRadius="8" />
+        </StackPanel>
+    </Grid>
+</Page>

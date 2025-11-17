@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ChatGPTDesktopApp (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ChatGPTDesktopApp (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
