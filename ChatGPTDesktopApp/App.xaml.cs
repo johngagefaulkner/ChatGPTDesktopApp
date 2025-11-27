@@ -1,5 +1,3 @@
-﻿using Microsoft.UI.Windowing;
-
 namespace ChatGPTDesktopApp;
 
 /// <summary>
@@ -8,9 +6,9 @@ namespace ChatGPTDesktopApp;
 public partial class App : Application
 {
     /// <summary>
-    /// The singleton <see cref="MainWindow"/> instance for the app.
+    /// The current singleton-instance of the <see cref="MainWindow"/> for the application.
     /// </summary>
-    public static MainWindow MainWindowInstance { get; private set; } = null!;
+    internal static MainWindow MainWindowInstance { get; private set; } = null!;
 
     /// <summary>
     /// Initializes the singleton application object.  This is the first line of authored code
@@ -27,9 +25,12 @@ public partial class App : Application
     /// <param name="args">Details about the launch request and process.</param>
     protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
     {
-        MainWindowInstance = new MainWindow();
+        if (MainWindowInstance is null)
+        {
+            MainWindowInstance = new();
+        }
+        
         MainWindowInstance.Activate();
-
         Log.LogInfo("Application launched.");
     }
 
